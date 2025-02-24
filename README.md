@@ -1,61 +1,65 @@
-<h1>Rocket-Booster</h1>
+# Rocket Booster
+![Demo](https://github.com/M-Shaharyar/Rocket-Booster/blob/main/Game%20Video/RocketBooster.gif)
 
-<h2>Overview</h2>
-<p>Rocket-Booster is a thrilling Unity-based game where players must navigate a rocket from point A to point B while avoiding obstacles. The game features multiple levels with increasing difficulty, requiring precision and skill to progress. Players must use thrust and rotation controls to maneuver through challenging environments and reach the finish point safely.</p>
+## Overview
+Rocket Booster is an exciting Unity-based game where players navigate a rocket from point A to point B while avoiding various obstacles. The game features four levels, with increasing difficulty. The first two levels provide a simple introduction, while the last two levels present a challenging terrain that is difficult to pass.
 
-<h2>How to Play</h2>
-<ul>
-  <li>Press <strong>Spacebar</strong> (or assigned thrust key) to activate the rocket's booster and move upward.</li>
-  <li>Use <strong>Left Arrow</strong> and <strong>Right Arrow</strong> keys (or assigned rotation controls) to steer the rocket.</li>
-  <li>Avoid colliding with obstacles; hitting them will restart the level.</li>
-  <li>Reach the designated landing zone (Finish) to progress to the next level.</li>
-  <li>Friendly objects are safe to touch and do not cause the rocket to crash.</li>
-</ul>
+## How to Play
+- Use **Spacebar** (or assigned thrust key) to propel the rocket upwards.
+- Use **Left Arrow** for Left Rotation and **Right Arrow** for Right Rotation to steer the rocket.
+- Avoid obstacles to prevent crashing.
+- Reach the landing platform to complete the level.
+- If the rocket crashes into an obstacle, the level restarts.
 
-<h2>Features</h2>
-<ul>
-  <li><strong>Realistic Physics:</strong> Uses Unity’s Rigidbody system for smooth and accurate movement.</li>
-  <li><strong>Multiple Levels:</strong> Players advance through progressively challenging levels.</li>
-  <li><strong>Dynamic Obstacle Avoidance:</strong> Various moving and stationary obstacles increase difficulty.</li>
-  <li><strong>Immersive Audio:</strong> Rocket thrust sound effects for a realistic experience.</li>
-  <li><strong>Level Restart & Progression:</strong> Automatically restarts on collision and progresses upon successful landing.</li>
-</ul>
+## Features
+- **Physics-Based Movement:** Realistic rocket propulsion and rotation.
+- **Level Progression:** Four levels with increasing difficulty.
+- **Obstacle Interaction:** Dynamic obstacles requiring precise navigation.
+- **Audio & Particle Effects:** Engine sound and thrust visuals enhance immersion.
+- **Debug Keys:** `L` key loads the next level, `C` key toggles collision detection.
 
-<h2>Scripts Used</h2>
-<ul>
-  <li><strong>CollisionHandler.cs</strong>
-    <ul>
-      <li>Handles rocket collisions with obstacles, friendly objects, and the finish line.</li>
-      <li>Restarts the level if the player crashes.</li>
-      <li>Advances to the next level upon reaching the finish point.</li>
-    </ul>
-  </li>
-  <li><strong>Movement.cs</strong>
-    <ul>
-      <li>Controls player movement using thrust and rotation.</li>
-      <li>Applies force for upward motion and rotation for directional control.</li>
-      <li>Includes smooth rotation handling for better gameplay experience.</li>
-      <li>Manages rocket engine audio playback.</li>
-    </ul>
-  </li>
-</ul>
+## Scripts Used
 
-<h2>Technologies & Tools Used</h2>
-<ul>
-  <li><strong>Game Engine:</strong> Unity</li>
-  <li><strong>Programming Language:</strong> C#</li>
-  <li><strong>Physics Engine:</strong> Unity’s Rigidbody system</li>
-  <li><strong>Audio:</strong> Unity AudioSource for thrust sound effects</li>
-</ul>
+### **CollisionHandler.cs**
+- Handles collisions with obstacles and landing platforms.
+- Plays crash or success sound effects.
+- Loads the next level or restarts the current one.
 
-<h2>How to Run the Game</h2>
-<pre><code>git clone https://github.com/M-Shaharyar/Rocket-Booster.git</code></pre>
-<p>Open the project in Unity.</p>
-<p>Press the Play button in the Unity Editor.</p>
-<p>Use the movement controls to navigate the rocket through obstacles.</p>
+### **Movement.cs**
+- Controls thrust and rotation mechanics.
+- Applies physics-based movement to the rocket.
+- Manages engine sound and particle effects.
 
-<h2>Contribution</h2>
-<p>Contributions are always welcome! Feel free to fork the repository, make improvements, and submit a pull request.</p>
+### **Osilator.cs**
+- Moves obstacles back and forth using a smooth oscillating motion.
+- Enhances level difficulty with dynamic barriers.
 
-<h2>License</h2>
-<p>This project is open-source and available under the <strong>MIT License</strong>.</p>
+### **QuitApplication.cs**
+- Allows the player to exit the game using the `Escape` key.
+
+### **LevelMenu.cs**
+- Provides a menu to select and load specific levels.
+
+### **MainMenu.cs**
+- Controls the main menu functionality.
+- Allows players to start the game or quit the application.
+
+## Technologies & Tools Used
+- **Game Engine:** Unity
+- **Programming Language:** C#
+- **Physics Engine:** Unity’s Rigidbody system
+- **UI Framework:** Unity UI for menus and level selection
+
+## How to Run the Game
+```sh
+git clone https://github.com/M-Shaharyar/Rocket-Booster.git
+```
+- Open the project in Unity.
+- Press the **Play** button in the Unity Editor.
+- Use the movement controls to navigate the rocket through obstacles.
+
+## Contribution
+Contributions are always welcome! Feel free to fork the repository, make improvements, and submit a pull request.
+
+## License
+This project is open-source and available under the **MIT License**.
